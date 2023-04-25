@@ -1,6 +1,6 @@
 <?php
-define("DB_HOST", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "");
-define("DB_NAME", "bicyclestore_mvc");
+define("DB_HOST", "us-cdbr-east-06.cleardb.net");
+define("DB_USER", "b08505a4d54f1b");
+define("DB_PASS", "c324ebea");
+define("DB_NAME", "heroku_e12e31de7b90f8d");
 ?>
