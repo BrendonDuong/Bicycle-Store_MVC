@@ -40,7 +40,7 @@
                         <label>Title</label>
                     </td>
                     <td>
-                        <input type="text" name="title" value="<?php echo $result_news['title'] ?>" placeholder="Enter title..." class="medium" />
+                        <input type="text" name="title" value="<?php echo $result_news['news_title'] ?>" placeholder="Enter title..." class="medium" />
                     </td>
                 </tr>
 				<tr>
