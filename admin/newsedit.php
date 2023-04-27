@@ -40,7 +40,7 @@
                         <label>Title</label>
                     </td>
                     <td>
-                        <input type="text" name="title" value="<?php echo $result_news['title'] ?>" placeholder="Enter title..." class="medium" />
+                        <input type="text" name="title" value="<?php echo $result_news['news_title'] ?>" placeholder="Enter title..." class="medium" />
                     </td>
                 </tr>
 				<tr>
@@ -61,7 +61,7 @@
 
                             <option
                             <?php 
-                            if($result['cate_post_newsId'] ==$result_news['post_category']){ echo 'selected';   }
+                            if($result['cate_post_newsId'] ==$result_news['cate_post_newsId']){ echo 'selected';   }
                             ?>
 
                             value="<?php echo $result['cate_post_newsId'] ?>"><?php echo $result['title'] ?></option>

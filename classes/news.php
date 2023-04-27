@@ -64,7 +64,7 @@
                     return $alert;
                 }
                 move_uploaded_file($file_temp,$uploaded_image);
-                $query = "INSERT INTO news(title,post_category,description,content,status,image) VALUES('$title','$post_category','$news_desc','$content','$news_status','$unique_image')";
+                $query = "INSERT INTO news(news_title,cate_post_newsId,description,content,status,image) VALUES('$title','$post_category','$news_desc','$content','$news_status','$unique_image')";
                 $result = $this->db->insert($query);
                 if($result){
                     $alert = "<span class='success'>Insert News Successfully</span>";
@@ -128,8 +128,8 @@
                 }
                 move_uploaded_file($file_temp,$uploaded_image);
                 $query = "UPDATE news SET 
-                title = '$title', 
-                post_category = '$post_category', 
+                news_title = '$title', 
+                cate_post_newsId = '$post_category', 
                 description = '$news_desc', 
                 content = '$content', 
                 image = '$unique_image', 
@@ -139,8 +139,8 @@
             }else{
                 //if user doesn't select image      
                 $query = "UPDATE news SET 
-                title = '$title', 
-                post_category = '$post_category', 
+                news_title = '$title', 
+                cate_post_newsId = '$post_category', 
                 description = '$news_desc', 
                 content = '$content', 
                 status = '$news_status' 

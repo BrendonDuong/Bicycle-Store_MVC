@@ -127,7 +127,7 @@
             $date = new DateTime();
                 $date->modify('+3 day');
                 $due_date = $date->format('Y-m-d'); 
-            $query = "SELECT * FROM cart, customer WHERE sessionId = '$sessionId' AND customerId = '$customerId'";
+            $query = "SELECT * FROM cart, customer WHERE sessionId = '$sessionId' AND customer.customerId = '$customerId'";
             $get_product = $this->db->select($query);
             if($get_product){
                 while($result = $get_product->fetch_assoc()){
@@ -150,7 +150,7 @@
             $date = new DateTime();
                 $date->modify('+3 day');
                 $due_date = $date->format('Y-m-d'); 
-            $query = "SELECT * FROM cart, customer WHERE sessionId = '$sessionId' AND customerId = '$customerId'";
+            $query = "SELECT * FROM cart, customer WHERE sessionId = '$sessionId' AND customer.customerId = '$customerId'";
             $get_product = $this->db->select($query);
             if($get_product){
                 while($result = $get_product->fetch_assoc()){
