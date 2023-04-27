@@ -7,7 +7,7 @@
         $customerId = Session::get('customer_customerId');
 		$insertOrder = $ct->insertOrder($customerId);
 		$delCart = $ct->del_all_data_cart();
-		echo "<script>window.location.href ='https://bicycle-store-app.herokuapp.com/success.php';</script>";
+		echo "<script>window.location.href ='success.php';</script>";
 		//header('Location:success.php');
 	}
 	// if(isset($_GET['partnerCode'])){
