@@ -119,7 +119,7 @@
 								echo 'Delivered';
 								?>
 
-                                || <a onclick ="return confirm('Are you want to delete?');" href="?delid=<?php echo $result['orderId'] ?>&price=<?php echo $result['price'] ?>&time=<?php echo $result['date_order'] ?>">Remove</a>
+                                || <a onclick ="return confirm('Are you sure you want to remove this Order from the Order List Page?');" href="?delid=<?php echo $result['orderId'] ?>&price=<?php echo $result['price'] ?>&time=<?php echo $result['date_order'] ?>">Remove</a>
 
                                 <?php
 								}elseif($result['status']==4){
@@ -128,7 +128,7 @@
 								echo 'Cancelled';
 								?>
 
-								|| <a onclick ="return confirm('Are you want to delete?');" href="?delid=<?php echo $result['orderId'] ?>&price=<?php echo $result['price'] ?>&time=<?php echo $result['date_order'] ?>">Remove</a>
+								|| <a onclick ="return confirm('Are you sure you want to remove this Order from the Order List Page?');" href="?delid=<?php echo $result['orderId'] ?>&price=<?php echo $result['price'] ?>&time=<?php echo $result['date_order'] ?>">Remove</a>
 								
 								<?php
 								
