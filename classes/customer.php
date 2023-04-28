@@ -137,9 +137,10 @@
             }
         }
         public function confirmAndChangePassword($data, $customerId){
-            // $email = mysqli_real_escape_string ($this->db->link, $data['email']);
             $new_password = mysqli_real_escape_string($this->db->link, md5($data['new_password']));
             $confirm_new_password = mysqli_real_escape_string($this->db->link, md5($data['confirm_new_password']));
+            $new_password = trim($new_password);
+            $confirm_new_password = trim($confirm_new_password);
             if($new_password=="" || $confirm_new_password==""){
                 $alert = "<span class='error'>Password and Confirm Password must be not empty!</span>";
                 return $alert;
