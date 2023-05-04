@@ -29,10 +29,9 @@ if(isset($_GET['cancelorderid'])){
 	$cancel_order = $ct->cancel_order($orderId,$time,$price);
 }
 ?>
-
  <div class="main">
     <div class="content">
-    	<div class="cartoption">
+    	<div class="cartoption">		
 			<div class="cartpage">
 			    	<h2>Your Details Ordered</h2>
 					
@@ -156,8 +155,10 @@ if(isset($_GET['cancelorderid'])){
 							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
 						</div>
 					</div> -->
-
-
+    	</div>  	
+       <div class="clear"></div>
+    </div>
+ </div>
 
 <?php
 	 include 'inc/footer.php';
