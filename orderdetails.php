@@ -159,6 +159,7 @@ if(isset($_GET['cancelorderid'])){
        <div class="clear"></div>
     </div>
  </div>
+ </div>
 
 <?php
 	 include 'inc/footer.php';
