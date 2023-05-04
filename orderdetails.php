@@ -8,10 +8,7 @@
 }
 </style>  
 <?php 
-    $login_check = Session::get('customer_login');
-    if($login_check==false){
-		echo "<script>window.location ='login.php';</script>";//header('Location:login.php');
-  }
+    
   $ct = new cart();
   if(isset($_GET['confirmid'])){
 	echo "<script>window.location = 'orderdetails.php'</script>";
