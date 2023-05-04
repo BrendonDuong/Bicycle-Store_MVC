@@ -155,7 +155,8 @@ if(isset($_GET['cancelorderid'])){
 							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
 						</div>
 					</div> -->
-    	</div>  	
+					</div>
+				</div>  	
        <div class="clear"></div>
     </div>
  </div>
