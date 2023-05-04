@@ -10,7 +10,7 @@
 <?php 
     $login_check = Session::get('customer_login');
     if($login_check==false){
-		//echo "<script>window.location.href ='login.php';</script>";//header('Location:login.php');
+		echo "<script>window.location ='login.php';</script>";//header('Location:login.php');
   }
   $ct = new cart();
   if(isset($_GET['confirmid'])){
@@ -21,7 +21,7 @@
 	$shifted_confirm = $ct->shifted_confirm($orderId,$time,$price);
 }
 if(isset($_GET['cancelorderid'])){
-	//echo "<script>window.location = 'orderdetails.php'</script>";
+	echo "<script>window.location = 'orderdetails.php'</script>";
 	$orderId = $_GET['cancelorderid'];
 	$time = $_GET['time'];
 	$price = $_GET['price'];
