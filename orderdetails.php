@@ -1,12 +1,4 @@
-<?php
-     include 'inc/header.php';
-	//  include 'inc/slider.php';
-?>
-<style type="text/css">
-    .cartpage h2 {
-    width: 500px;
-}
-</style>  
+
 
 <?php 
     $login_check = Session::get('customer_login');
@@ -29,6 +21,15 @@ if(isset($_GET['cancelorderid'])){
 	$cancel_order = $ct->cancel_order($orderId,$time,$price);
 }
 ?>
+<?php
+     include 'inc/header.php';
+	//  include 'inc/slider.php';
+?>
+<style type="text/css">
+    .cartpage h2 {
+    width: 500px;
+}
+</style>  
  <div class="main">
     <div class="content">
     	<div class="cartoption">		
