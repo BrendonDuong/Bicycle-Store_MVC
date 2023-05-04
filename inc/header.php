@@ -213,7 +213,7 @@ ul.dropdown-menu{
 	  $customerId = Session::get('customer_customerId');
 	  $check_order = $ct->check_order($customerId);
 	  if($check_order==true){
-		echo '<li><a href="./orderdetails.php">Ordered</a></li>';
+		echo '<li><a href="orderdetails.php">Ordered</a></li>';
 	}else{
 		echo '';
 	}
