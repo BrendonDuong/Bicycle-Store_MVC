@@ -97,23 +97,25 @@ ul.dropdown-menu{
 							</a>
 						</div>
 			      </div>
-			<?php //Logout
-			if(isset($_GET['customer_customerId'])){
-				$customerId = $_GET['customer_customerId'];
-				$delCart = $ct->del_all_data_cart();
-				$delCompare = $ct->del_compare($customerId);
-				Session::destroy();
-			}
-			?>
-		   <div class="login">
-			<?php
-			$login_check = Session::get('customer_login');
-			if($login_check==false){
-				echo '<a href="login.php"><i class="fas fa-user"> Login and Register </i></a></div>';
-			}else{
-				echo '<a>Hello, </a>'.Session::get('customer_customerName').' | <a href="?customer_customerId='.Session::get('customer_customerId').'">Logout</a></div>';
-			}
-			?>
+				<?php //Logout
+				if(isset($_GET['customer_customerId'])){
+					$customerId = $_GET['customer_customerId'];
+					$delCart = $ct->del_all_data_cart();
+					$delCompare = $ct->del_compare($customerId);
+					Session::destroy();
+				}
+				?>
+			<div class="login">
+				<?php
+				$login_check = Session::get('customer_login');
+				if($login_check==false){
+					echo '<a href="login.php"><i class="fas fa-user"> Login and Register </i></a></div>';
+				}else{
+					echo '<a>Hello, </a>'.Session::get('customer_customerName').' | <a href="?customer_customerId='.Session::get('customer_customerId').'">Logout</a></div>';
+				}
+				?>
+			</div>
+		</div>
 		 <div class="clear"></div>
 	 </div>
 	 <div class="clear"></div>
