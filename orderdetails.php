@@ -13,7 +13,7 @@
     if($login_check==false){
 		echo "<script>window.location ='login.php';</script>";//header('Location:login.php');
   }
-  $ct = new cart();
+  //$ct = new cart();
   if(isset($_GET['confirmid'])){
 	echo "<script>window.location = 'orderdetails.php'</script>";
 	$orderId = $_GET['confirmid'];
