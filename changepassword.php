@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['confirm'])) {
       }
    ?>
         	<form action="" method="POST" >
-                    <input type="hidden" name="customer_Id" value="<?php echo $result['customer_Id'] ?>">
+                    <!-- <input type="hidden" name="customer_Id" value="<?php echo $result['customer_Id'] ?>"> -->
                 	<!-- <input type="text" name="email" id="email" class="field" placeholder="Enter Email..."> -->
                     <input type="password" name="new_password" id="new_password" class="field" placeholder="Enter New Password...">
                     <input type="password" name="confirm_new_password" id="confirm_new_password" class="field" placeholder="Enter Confirm New Password...">

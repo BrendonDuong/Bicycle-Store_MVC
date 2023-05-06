@@ -238,7 +238,7 @@
                 <button onclick="window.location='?orderid=order'" class="btn btn-success" name="redirect" id="redirect">Payment with VNPAY</button>
                 </form>
 				<p></p>
-                <form action="momo_paymentgateways.php" method="POST">
+                <!-- <form action="momo_paymentgateways.php" method="POST">
                         <input type="hidden" name="total_paymentgateways" value="<?php echo $gtotal ?>"></input>
                 <button onclick="window.location='?orderid=order'" class="btn btn-danger" name="captureWallet">Payment with QR MOMO</button>
                 </form>
@@ -246,7 +246,7 @@
                 <form action="momo_paymentgateways.php" method="POST">
                         <input type="hidden" name="total_paymentgateways" value="<?php echo $gtotal ?>"></input>
                 <button onclick="window.location='?orderid=order'" class="btn btn-danger" name="payWithATM">Payment with MOMO ATM</button>
-                </form>
+                </form> -->
 					</div>
 					<?php
 					}else{

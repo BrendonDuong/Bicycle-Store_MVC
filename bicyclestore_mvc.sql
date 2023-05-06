@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 11:35 AM
+-- Generation Time: Apr 28, 2023 at 02:04 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -81,6 +81,15 @@ CREATE TABLE `cart` (
   `image` varchar(200) NOT NULL,
   `customerId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cartId`, `productId`, `sessionId`, `productName`, `price`, `quantity`, `image`, `customerId`) VALUES
+(264, 14, 'um80p57417qlev4vsn9otmou6h', 'Cube Agree C:62', '200', 1, '624359107a.png', 1),
+(265, 5, 'fng3neabma7d56thljr2kf1dfn', 'MTB Sport Disc WSD ', '280', 1, '3c34aa3dd6.png', 11),
+(268, 6, 'h440r63fpli70srlqufn3h2vcv', 'DE ROSA 838', '285', 1, '1ce5c53cab.png', 11);
 
 -- --------------------------------------------------------
 
@@ -271,7 +280,8 @@ CREATE TABLE `tbl_comment` (
 
 INSERT INTO `tbl_comment` (`commentId`, `customerId`, `commentName`, `email`, `comment`, `productId`, `image`, `dated`, `rating`) VALUES
 (47, 1, 'Tuong Duong', 'tuongdv123@gmail.com', 'Nice!', 5, '', '2023-04-25 02:51:24', 5),
-(48, 11, 'Duy Huynh', 'duyhuynh@gmail.com', 'Good!', 6, '', '2023-04-25 02:52:21', 5);
+(48, 11, 'Duy Huynh', 'duyhuynh@gmail.com', 'Good!', 6, '', '2023-04-25 02:52:21', 5),
+(50, 11, 'Duy Huynh', 'duyhuynh@gmail.com', 'Nice!', 13, '', '2023-04-28 01:55:23', 4);
 
 -- --------------------------------------------------------
 
@@ -287,6 +297,13 @@ CREATE TABLE `tbl_compare` (
   `price` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_compare`
+--
+
+INSERT INTO `tbl_compare` (`compareId`, `customerId`, `productId`, `productName`, `price`, `image`) VALUES
+(9, 11, 6, 'DE ROSA 838', '285', '1ce5c53cab.png');
 
 -- --------------------------------------------------------
 
@@ -346,14 +363,15 @@ INSERT INTO `tbl_order` (`orderId`, `productId`, `productName`, `customerId`, `q
 (131, 3, 'Haro Leucadia Bike-Gloss Blue', 1, 1, '90', '538952bcde.png', 0, '2023-04-05', '2023-04-08', '12/4 HT 17', 'Offline Payment'),
 (132, 3, 'Haro Leucadia Bike-Gloss Blue', 10, 2, '180', '538952bcde.png', 4, '2023-04-02', '2023-04-05', '12/4 HT 17', 'Online Payment'),
 (133, 15, 'Curie Roller Zip Bike', 10, 1, '150', 'e3c33b2b09.png', 2, '2023-04-09', '2023-04-12', '12/4 HT 17', 'Offline Payment'),
-(135, 5, 'MTB Sport Disc WSD ', 11, 1, '280', '3c34aa3dd6.png', 0, '2023-04-09', '2023-04-12', '12/4 HT 17', 'Offline Payment'),
-(136, 3, 'Haro Leucadia Bike-Gloss Blue', 11, 2, '180', '538952bcde.png', 0, '2023-04-09', '2023-04-12', '12/4 HT 17', 'Online Payment'),
 (137, 8, 'WFO 9 RDO', 1, 1, '270', '419e053382.png', 0, '2023-04-21', '2023-04-24', '12/4 HT 17', 'Online Payment'),
 (138, 7, 'Unknown Bikes Fixed Gear Bike Singularity - Black', 1, 2, '500', 'f116d321f5.png', 0, '2023-04-23', '2023-04-26', '12/4 HT 17', 'Offline Payment'),
 (144, 9, 'AWOL Expert 2018', 1, 1, '330', 'e336e32d24.png', 0, '2023-04-23', '2023-04-26', '12/4 HT 17', 'Online Payment'),
 (145, 3, 'Haro Leucadia Bike-Gloss Blue', 1, 1, '90', '538952bcde.png', 0, '2023-04-23', '2023-04-26', '12/4 HT 17', 'Offline Payment'),
 (146, 8, 'WFO 9 RDO', 1, 1, '270', '419e053382.png', 0, '2023-04-24', '2023-04-27', '12/4 HT 17', 'Offline Payment'),
-(147, 11, 'Mini Folding Bike', 1, 1, '170', 'fcd8008ff4.png', 0, '2023-04-24', '2023-04-27', '12/4 HT 17', 'Online Payment');
+(147, 11, 'Mini Folding Bike', 1, 1, '170', 'fcd8008ff4.png', 1, '2023-04-24', '2023-04-27', '12/4 HT 17', 'Online Payment'),
+(152, 5, 'MTB Sport Disc WSD ', 11, 1, '280', '3c34aa3dd6.png', 2, '2023-04-27', '2023-05-01', '12/4 HT 17', 'Offline Payment'),
+(154, 3, 'Haro Leucadia Bike-Gloss Blue', 11, 2, '180', '538952bcde.png', 4, '2023-04-27', '2023-04-30', '12/4 HT 17', 'Online Payment'),
+(155, 4, 'Koga World Traveller Touring Bike', 11, 1, '400', '04bd5151b2.png', 1, '2023-04-27', '2023-04-30', '12/4 HT 17', 'Offline Payment');
 
 -- --------------------------------------------------------
 
@@ -369,6 +387,13 @@ CREATE TABLE `tbl_wishlist` (
   `price` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_wishlist`
+--
+
+INSERT INTO `tbl_wishlist` (`wishlistId`, `customerId`, `productId`, `productName`, `price`, `image`) VALUES
+(10, 11, 5, 'MTB Sport Disc WSD ', '280', '3c34aa3dd6.png');
 
 --
 -- Indexes for dumped tables
@@ -478,7 +503,7 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
+  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=278;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -490,7 +515,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `category_post_news`
 --
 ALTER TABLE `category_post_news`
-  MODIFY `cate_post_newsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cate_post_newsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -502,7 +527,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `newsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `newsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -520,13 +545,13 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `tbl_comment`
 --
 ALTER TABLE `tbl_comment`
-  MODIFY `commentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `commentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `tbl_compare`
 --
 ALTER TABLE `tbl_compare`
-  MODIFY `compareId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `compareId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_feedback`
@@ -538,13 +563,13 @@ ALTER TABLE `tbl_feedback`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
+  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 
 --
 -- AUTO_INCREMENT for table `tbl_wishlist`
 --
 ALTER TABLE `tbl_wishlist`
-  MODIFY `wishlistId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `wishlistId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

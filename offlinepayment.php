@@ -4,8 +4,8 @@
 ?>
 <?php 
     if(isset($_GET['orderid']) && $_GET['orderid']=='order'){
-        $customerId = Session::get('customer_customerId');
-		$insertOrder = $ct->insertOfflineOrder($customerId);
+        $customerid = Session::get('customer_customerId');
+		$insertOrder = $ct->insertOfflineOrder($customerid);
 		$delCart = $ct->del_all_data_cart();
 		echo "<script>window.location.href ='successoffline.php';</script>";
 		//header('Location:success.php');

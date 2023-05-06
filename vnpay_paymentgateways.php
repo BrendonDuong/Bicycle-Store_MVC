@@ -4,7 +4,7 @@ if(isset($_GET['orderid']) && $_GET['orderid']=='order'){
     $customerId = Session::get('customer_customerId');
     // $insertOrder = $ct->insertOrder($customerId);
     $delCart = $ct->del_all_data_cart();
-    echo "<script>window.location.href ='https://bicycle-store-app.herokuapp.com/success.php';</script>";
+    echo "<script>window.location.href ='success.php';</script>";
     //header('Location:success.php');
 }
 date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -17,7 +17,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 $vnp_TmnCode = "5EXWWEHR"; //Mã định danh merchant kết nối (Terminal Id)
 $vnp_HashSecret = "CXLNCVQQQNFCEXQNXMRTPJOXLWAOUKOE"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-$vnp_Returnurl = "https://bicycle-store-app.herokuapp.com/success.php";
+$vnp_Returnurl = "http://localhost/Bicycle%20Store_MVC/success.php";
 $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 $apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";
 //Config input format

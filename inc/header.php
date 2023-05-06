@@ -51,8 +51,8 @@ ul.dropdown-menu{
 <script type="text/javascript" src="js/easing.js"></script> 
 <script type="text/javascript" src="js/nav-hover.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -97,25 +97,23 @@ ul.dropdown-menu{
 							</a>
 						</div>
 			      </div>
-				<?php //Logout
-				if(isset($_GET['customer_customerId'])){
-					$customerId = $_GET['customer_customerId'];
-					$delCart = $ct->del_all_data_cart();
-					$delCompare = $ct->del_compare($customerId);
-					Session::destroy();
-				}
-				?>
-			<div class="login">
-				<?php
-				$login_check = Session::get('customer_login');
-				if($login_check==false){
-					echo '<a href="login.php"><i class="fas fa-user"> Login and Register </i></a></div>';
-				}else{
-					echo '<a>Hello, </a>'.Session::get('customer_customerName').' | <a href="?customer_customerId='.Session::get('customer_customerId').'">Logout</a></div>';
-				}
-				?>
-			</div>
-		</div>
+			<?php //Logout
+			if(isset($_GET['customer_customerId'])){
+				$customerId = $_GET['customer_customerId'];
+				$delCart = $ct->del_all_data_cart();
+				$delCompare = $ct->del_compare($customerId);
+				Session::destroy();
+			}
+			?>
+		   <div class="login">
+			<?php
+			$login_check = Session::get('customer_login');
+			if($login_check==false){
+				echo '<a href="login.php"><i class="fas fa-user"> Login and Register </i></a></div>';
+			}else{
+				echo '<a>Hello, </a>'.Session::get('customer_customerName').' | <a href="?customer_customerId='.Session::get('customer_customerId').'">Logout</a></div>';
+			}
+			?>
 		 <div class="clear"></div>
 	 </div>
 	 <div class="clear"></div>
