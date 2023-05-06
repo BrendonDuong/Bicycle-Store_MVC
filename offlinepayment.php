@@ -7,7 +7,7 @@
         $customerid = Session::get('customer_customerId');
 		$insertOrder = $ct->insertOfflineOrder($customerid);
 		$delCart = $ct->del_all_data_cart();
-		echo "<script>window.location.href ='successoffline.php';</script>";
+		echo "<script>window.location.href ='https://bicycle-store-app.herokuapp.com/successoffline.php';</script>";
 		//header('Location:success.php');
 	}
 ?>
