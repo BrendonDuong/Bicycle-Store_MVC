@@ -56,10 +56,16 @@
             if($productName=="" || $brand=="" || $category=="" || $product_desc=="" || $price=="" || $type=="" || $file_name==""){
                 $alert = "<span class='error'>Fields must be not empty!</span>";
                 return $alert;
-            }else{
+            }
+            elseif($price <= 0){
+                // echo ="<span class='error'>Image should be less than 1MB!</span>";
+                 $alert = "<span class='error'>Price must be greater than 0!</span>";
+                return $alert;
+            }
+            else{
                 if(!empty($file_name)){   
                     //if the user selects a image            
-                if($file_size > 20480){
+                if($file_size > 2048000){
                     // echo ="<span class='error'>Image should be less than 1MB!</span>";
                      $alert = "<span class='error'>Image should be less than 2MB!</span>";
                     return $alert;
@@ -104,7 +110,7 @@
              }else{
                  if(!empty($file_name)){   
                      //if the user selects a image            
-                 if($file_size > 20480){
+                 if($file_size > 2048000){
                      // echo ="<span class='error'>Image should be less than 1MB!</span>";
                       $alert = "<span class='error'>Image should be less than 2MB!</span>";
                      return $alert;
@@ -192,7 +198,7 @@
              }else{
                  if(!empty($file_name)){   
                      //if the user selects a image            
-                 if($file_size > 20480){
+                 if($file_size > 2048000){
                      // echo ="<span class='error'>Image should be less than 1MB!</span>";
                       $alert = "<span class='error'>Image should be less than 2MB!</span>";
                      return $alert;
@@ -251,10 +257,16 @@
             if($productName=="" || $brand=="" || $category=="" || $product_desc=="" || $price=="" || $type==""){
                 $alert = "<span class='error'>Fields must be not empty!</span>";
                 return $alert;
-            }else{
+            }
+            elseif($price <= 0){
+                // echo ="<span class='error'>Image should be less than 1MB!</span>";
+                 $alert = "<span class='error'>Price must be greater than 0!</span>";
+                return $alert;
+            }
+            else{
                 if(!empty($file_name)){   
                     //if the user selects a image            
-                if($file_size > 20480){
+                if($file_size > 2048000){
                     // echo ="<span class='error'>Image should be less than 1MB!</span>";
                      $alert = "<span class='error'>Image should be less than 2MB!</span>";
                     return $alert;

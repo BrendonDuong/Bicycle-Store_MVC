@@ -10,7 +10,7 @@
 						<!-- <li><a href="#">Customer Service</a></li> -->
 						<!-- <li><a href="search.php"><span>Advanced Search</span></a></li> -->
 						<li><a href="orderdetails.php">Orders and Returns</a></li>
-						<li><a href="contact.php"><span>Contact Us</span></a></li>
+						<li><a href="contact.php">Contact Us</a></li>
 						</ul>
 					</div>
 				<div class="col_1_of_4 span_1_of_4">

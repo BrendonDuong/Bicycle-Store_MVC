@@ -26,7 +26,7 @@
     	<div class="content_top">
 		
     		<div class="heading">
-    		<h3>News Title : <?php echo $result['title'] ?></h3>
+    		<h3>News Title : <?php echo $result['news_title'] ?></h3>
     		</div>
     		<div class="clear"></div>
     	</div>
@@ -34,7 +34,7 @@
 	      <div class="section group">
 				<div class="col-md-12">
 					 
-					 <h2><?php echo $result['title'] ?></h2>
+					 <h2><?php echo $result['news_title'] ?></h2>
 					 <!-- <p><?php echo $fm->textShorten($result['description'],150); ?></p> -->
                      <p><?php echo $result['content'] ?></p>
 				    

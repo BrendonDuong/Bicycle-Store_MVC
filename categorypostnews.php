@@ -42,7 +42,7 @@
 			?>
 				<div class="grid_1_of_4 images_1_of_4">
 					 <a href="details_news.php?newsid=<?php echo $result['newsId'] ?>"><img src="admin/uploads/<?php echo $result['image'] ?>" width="200px" alt="" /></a>
-					 <h2><?php echo $result['title'] ?></h2>
+					 <h2><?php echo $result['news_title'] ?></h2>
 					 <p><?php echo $fm->textShorten($result['description'],150); ?></p>
 				     <div class="button"><span><a href="details_news.php?newsid=<?php echo $result['newsId'] ?>" class="details">News Details</a></span></div>
 				</div>

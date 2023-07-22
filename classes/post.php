@@ -110,7 +110,7 @@
             return $result;
         }
         public function get_post_by_cat($id){
-            $query = "SELECT news.* FROM news WHERE news.post_category = '$id'";
+            $query = "SELECT news.* FROM news WHERE news.cate_post_newsId = '$id'";
             $result = $this->db->select($query);
             return $result;
         }

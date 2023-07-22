@@ -52,7 +52,7 @@
             }else{
                 if(!empty($file_name)){   
                     //if the user selects a image            
-                if($file_size > 20480){
+                if($file_size > 2048000){
                     // echo ="<span class='error'>Image should be less than 1MB!</span>";
                      $alert = "<span class='error'>Image should be less than 2MB!</span>";
                     return $alert;
@@ -115,7 +115,7 @@
             }else{
                 if(!empty($file_name)){   
                     //if the user selects a image            
-                if($file_size > 20480){
+                if($file_size > 2048000){
                     // echo ="<span class='error'>Image should be less than 1MB!</span>";
                      $alert = "<span class='error'>Image should be less than 2MB!</span>";
                     return $alert;
