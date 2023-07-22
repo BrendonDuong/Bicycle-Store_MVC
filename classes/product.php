@@ -73,7 +73,7 @@
                 elseif (in_array($file_ext, $permited) === false)
                 {
                     // echo "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
-                    $alert = "<span class='success'>You can upload only:-".implode(', ', $permited)."</span>";
+                    $alert = "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
                     return $alert;
                 }
                 move_uploaded_file($file_temp,$uploaded_image);
@@ -118,7 +118,7 @@
                  elseif (in_array($file_ext, $permited) === false)
                  {
                      // echo "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
-                     $alert = "<span class='success'>You can upload only:-".implode(', ', $permited)."</span>";
+                     $alert = "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
                      return $alert;
                  }
                  move_uploaded_file($file_temp,$uploaded_image);
@@ -206,7 +206,7 @@
                  elseif (in_array($file_ext, $permited) === false)
                  {
                      // echo "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
-                     $alert = "<span class='success'>You can upload only:-".implode(', ', $permited)."</span>";
+                     $alert = "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
                      return $alert;
                  }
                 move_uploaded_file($file_temp,$uploaded_image);
@@ -274,7 +274,7 @@
                 elseif (in_array($file_ext, $permited) === false)
                 {
                     // echo "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
-                    $alert = "<span class='success'>You can upload only:-".implode(', ', $permited)."</span>";
+                    $alert = "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
                     return $alert;
                 }
                 move_uploaded_file($file_temp,$uploaded_image);
